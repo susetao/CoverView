@@ -93,7 +93,7 @@ const ComponentToImg = (props) => {
 					}
 				</span>
 
-				<span className="mx-2">Download</span>
+				<span className="mx-2">下载</span>
 			</button>
 			<button
 				className="border p-2 bg-gray-700 hover:bg-gray-800 flex items-center text-white text-xl rounded-lg m-4 px-4"
@@ -113,7 +113,7 @@ const ComponentToImg = (props) => {
 
 				</span>
 
-				<span className="mx-2">Cope</span>
+				<span className="mx-2">复制</span>
 			</button>
 		</React.Fragment>
 	);

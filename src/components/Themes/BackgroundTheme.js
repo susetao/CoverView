@@ -132,7 +132,7 @@ const BackgroundTheme = ({ config }) => {
                             <div className="flex flex-col p-2  bg-white items-center justify-center">
 
                                 <div className="flex items-center w-full px-6 ">
-                                    <div className="text-lg font-semibold text-gray-700">Click on any image to select</div>
+                                    <div className="text-lg font-semibold text-gray-700">点击选择图片</div>
                                 <form onSubmit={(e) => handleSearchSubmit(e)} className=" ml-auto mr-2 w-1/2 flex bg-gray-50 rounded-full border mb-2">
                                     <input type="text"
                                         value={searchText}

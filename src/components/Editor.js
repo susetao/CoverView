@@ -21,11 +21,11 @@ import theme7 from '../assets/images/theme7.webp'
 const defaultIcon = { 'label': 'react', 'value': 'react' }
 
 const defaultSettings = {
-	title: "A begineers guide to frontend development",
+	title: "前端开发的初学者指南",
 	bgColor: "#949ee5",
 	pattern: "",
 	download: "PNG",
-	author: 'Rutik Wankhade',
+	author: '沐雨声',
 	icon: defaultIcon,
 	devIconOptions: [defaultIcon],
 	font: 'font-Anek',
@@ -100,7 +100,7 @@ class Editor extends React.Component {
 										<Tab.Panel>
 
 											<div className="m-2 flex flex-col">
-												<span className="font-medium pb-1">Blog Title</span>
+												<span className="font-medium pb-1">博客标题</span>
 												<textarea
 													type="text"
 													value={this.state.title}
@@ -122,7 +122,7 @@ class Editor extends React.Component {
 											</div>
 
 											<div className="flex flex-col m-2 ">
-												<span className="font-medium pb-1">Icon</span>
+												<span className="font-medium pb-1">图标</span>
 												<Select value={this.state.icon}
 													onChange={(selectedOption) => this.setState({ icon: selectedOption })}
 													options={this.state.devIconOptions}
@@ -145,7 +145,7 @@ class Editor extends React.Component {
 											<div className="flex items-center">
 
 												<div className="flex flex-col m-2 w-1/2">
-													<span className="font-medium pb-1">Font</span>
+													<span className="font-medium pb-1">字体</span>
 
 													<select
 														value={this.state.font}
@@ -160,7 +160,7 @@ class Editor extends React.Component {
 													</select>
 												</div>
 												<div className="flex flex-col m-2 w-1/2">
-													<span className="font-medium pb-1">Color</span>
+													<span className="font-medium pb-1">颜色</span>
 													<div className="border rounded flex items-center p-2">
 
 														<span className="text-xl text-gray-700  mx-2">{this.state.bgColor}</span>
@@ -205,7 +205,7 @@ class Editor extends React.Component {
 												</div> */}
 
 												<div className="flex flex-col m-2 w-full">
-													<span className="font-medium pb-1">Platform</span>
+													<span className="font-medium pb-1">平台</span>
 
 													<select
 														onChange={(e) => this.setState({ platform: e.target.value })}
@@ -221,7 +221,7 @@ class Editor extends React.Component {
 											<button
 												className="flex items-center bg-gray-700 text-white rounded-lg mt-6 text-lg font-semibold p-1 px-4 mx-auto border"
 												onClick={this.handleReset}>
-												<span>Reset All</span>
+												<span>重置所有</span>
 											</button>
 
 										</Tab.Panel>
@@ -230,7 +230,7 @@ class Editor extends React.Component {
 										<Tab.Panel className="h-99 w-full flex flex-col justify-center">
 
 											<div className="flex items-center border rounded-xl border-gray-50 px-4">
-												<h2 className="text-lg pl-2 font-inter font-semibold">Themes</h2>
+												<h2 className="text-lg pl-2 font-inter font-semibold">主题</h2>
 												<div className="ml-auto mr-1 p-2">
 													<RandomTheme onThemeChange={this.getRandomTheme} />
 
