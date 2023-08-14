@@ -29,12 +29,12 @@ const defaultSettings = {
 	icon: defaultIcon,
 	devIconOptions: [defaultIcon],
 	font: 'font-Anek',
-	theme: 'background',
+	theme: 'basic',
 	customIcon: '',
-  platform: 'hashnode'
+  	platform: 'hashnode'
 };
 
-const devIconsUrl = "https://raw.githubusercontent.com/devicons/devicon/master/devicon.json"
+const devIconsUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon/devicon.json"
 // const devIconOptions = [
 // 	{ value: 'None', label: 'None' },
 // 	{ value: 'javascript', label: 'Javascript' },
@@ -49,7 +49,7 @@ class Editor extends React.Component {
 	componentDidMount() {
 		console.log("Mount")
 		fetch(devIconsUrl).then(r => r.json()).then(data => {
-			data.push({ name: 'custom' })
+			data.unshift({ name: '自定义' })
 			this.setState({ devIconOptions: data.map(item => ({ 'value': item.name, 'label': item.name })) })
 		})
 	}
@@ -131,7 +131,7 @@ class Editor extends React.Component {
 												/>
 											</div>
 
-											{this.state.icon.label === 'custom' ?
+											{this.state.icon.label === '自定义' ?
 												<div className="flex items-center justify-center m-2">
 													<input type="file"
 														className="focus:outline-none text-lg cursor-pointer bg-white rounded border"
@@ -175,8 +175,8 @@ class Editor extends React.Component {
 
 
 											<div className="flex items-center">
-												{/* <div className="flex flex-col m-2 w-1/2">
-													<span className="font-medium pb-1">Pattern</span>
+												{<div className="flex flex-col m-2 w-1/2">
+													<span className="font-medium pb-1">底纹图案</span>
 													<select
 														onChange={(e) => this.setState({ pattern: e.target.value })}
 														className="focus:outline-none border text-xl p-2 rounded"
@@ -202,7 +202,7 @@ class Editor extends React.Component {
 														<option>jupiter</option>
 														<option>sun</option>
 													</select>
-												</div> */}
+												</div>}
 
 												<div className="flex flex-col m-2 w-full">
 													<span className="font-medium pb-1">平台</span>
