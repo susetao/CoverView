@@ -21,7 +21,8 @@ const ComponentToImg = (props) => {
 	async function saveImage(data) {
 		var a = document.createElement("A");
 		a.href = data;
-		a.download = `cover.png`;
+
+		a.download = props.title +'-'+ props.author + '.png';
 		document.body.appendChild(a);
 		setLoading(false)
 
