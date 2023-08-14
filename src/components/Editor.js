@@ -111,7 +111,7 @@ class Editor extends React.Component {
 											</div>
 
 											<div className="flex flex-col m-2 ">
-												<span className="font-medium pb-1">Author</span>
+												<span className="font-medium pb-1">作者</span>
 												<input
 													type="text"
 													value={this.state.author}
