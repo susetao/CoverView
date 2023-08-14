@@ -295,7 +295,7 @@ class Editor extends React.Component {
 
 						<div className=" flex m-6 flex-col items-center justify-center ">
 
-							<ComponentToImg downloadAs={this.state.download}>
+							<ComponentToImg {...this.state}>
 								<CoverImage {...this.state} />
 							</ComponentToImg>
 						</div>
