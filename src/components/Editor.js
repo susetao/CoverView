@@ -99,6 +99,13 @@ class Editor extends React.Component {
 									<Tab.Panels className="bg-white border-l w-full p-4 ">
 										<Tab.Panel>
 
+											<div className="flex items-center border rounded-xl border-gray-50 px-4">
+												<h2 className="text-lg pl-2 font-inter font-semibold">随机配色</h2>
+												<div className="ml-auto mr-1 p-2">
+													<RandomTheme onThemeChange={this.getRandomTheme} />
+												</div>
+											</div>
+
 											<div className="m-2 flex flex-col">
 												<span className="font-medium pb-1">博客标题</span>
 												<textarea
