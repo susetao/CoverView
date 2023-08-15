@@ -23,6 +23,28 @@ const CoverImage = (props) => {
 	// 	throw new Error("Bad Hex");
 	// }
 
+	const readClipboard = () => {
+		return new Promise((resolve, reject) => {
+			navigator.clipboard.read().then(clipboardItems => {
+				for (const clipboardItem of clipboardItems) {
+					for (const type of clipboardItem.types) {
+						if (type === 'image/png' || type === 'image/jpeg') {
+							const blobPromise = clipboardItem.getType(type);
+							blobPromise.then(blob => {
+								const imageURL = URL.createObjectURL(blob);
+								resolve(imageURL); // 解析返回图片的 URL
+							});
+						}
+					}
+				}
+				// 如果没有找到图片类型的剪贴板内容，可以在这里拒绝 Promise
+				// reject(new Error('剪贴板中没有图片'));
+			}).catch(error => {
+				reject(error); // 捕获错误并拒绝 Promise
+			});
+		});
+	};
+
 	const { theme } = props;
 
 	const selectTheme = (theme) => {
@@ -30,9 +52,9 @@ const CoverImage = (props) => {
 			case 'basic': return <BasicTheme config={props} />
 			case 'modern': return <ModernTheme config={props} />
 			case 'outline': return <OutlineTheme config={props} />
-			case 'preview': return <PreviewTheme config={props} />
+			case 'preview': return <PreviewTheme config={props}  readClipboard={readClipboard} />
 			case 'stylish': return <StylishTheme config={props} />
-			case 'mobile': return <MobileMockupTheme config={props} />
+			case 'mobile': return <MobileMockupTheme config={props}  readClipboard={readClipboard} />
 			case 'background': return <BackgroundTheme config={props} />
 
 			default: return <BasicTheme config={props} />
