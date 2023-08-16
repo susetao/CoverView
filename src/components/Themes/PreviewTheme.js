@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PreviewTheme = ({ config }) => {
+const PreviewTheme = ({ config , readClipboard}) => {
     const { bgColor, platform, title, font } = config;
 
     const [image, setImage] = useState()
@@ -42,7 +42,23 @@ const PreviewTheme = ({ config }) => {
                                 className="text-xl cursor-pointer mb-2 bg-white rounded border"
                                 onChange={(e) => setImage(URL.createObjectURL(e.target.files[0]))}
                             />
-                            <span className=" text-center italic">click to upload a screenshot</span>
+                            <span className=" text-center italic">点击上传截图</span>
+                            <button
+                                className="border p-2 bg-gray-700 hover:bg-gray-800 flex items-center text-white text-xl rounded-lg m-4 px-4"
+                                onClick={() => {
+                                    readClipboard().then(clipboard => {
+                                        setImage(clipboard); // 处理返回的 Blob URL
+                                    }).catch(error => {
+                                        console.error('读取剪贴板失败：', error);
+                                    })
+                                }}>
+
+                                <span>
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                                </span>
+
+                                <span className="mx-2">剪贴板</span>
+                            </button>
                         </div>
 
                     }
