@@ -25,7 +25,7 @@ const defaultSettings = {
 	bgColor: "#949ee5",
 	pattern: "",
 	download: "PNG",
-	author: '沐雨声',
+	author: 'Tao',
 	icon: defaultIcon,
 	devIconOptions: [defaultIcon],
 	font: 'font-Anek',
