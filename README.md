@@ -33,7 +33,7 @@ Creating cover images for your blogs is now super easy.
 
 ## ## 👩‍💻 开发
 本项目使用 [Create React App] 构建(https://github.com/facebook/create-react-app).
-
+通过 http://ip:3000 访问
 
 
 ```shell
