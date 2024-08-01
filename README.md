@@ -1,7 +1,9 @@
 
 
 ## Coverview
+## 封面视图
 Creating cover images for your blogs is now super easy.
+博客封面图片制作，现在轻松快捷。
 <p>
 <a href="https://github.com/rutikwankhade/CoverView"><img src="https://img.shields.io/github/stars/rutikwankhade/CoverView.svg?style=social&label=Star"></a>
 <a href="https://github.com/rutikwankhade/CoverView"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
@@ -21,15 +23,16 @@ Creating cover images for your blogs is now super easy.
  
 
 
-## ⚡ Features
-- 🚀 super fast and easy to use
-- 🌈 4 different themes, multiple fonts
-- 🌠 100+ dev icons with option to upload custom icon
-- ✨ 15+ different background patterns
-- 💾 Cover size based on blogging platform (i.e hashnode and dev)
+## ⚡ 功能特点
+- 🚀 快速且易于使用
+- 🌈 多种主题，多种字体
+- 🌠 100+个图标，支持自定义上传
+- ✨ 多种背景图案
+- 💾 根据博客平台（如hashnode、dev等）自动适配封面尺寸
 
-## 👩‍💻 Developing
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## ## 👩‍💻 开发
+本项目使用 [Create React App] 构建(https://github.com/facebook/create-react-app).
 
 
 
@@ -40,18 +43,19 @@ npm start
 ```
 
 
-## 👇 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## 👇 贡献
+欢迎提交拉取请求。对于较大的更改，请先提出问题，讨论您希望做出的改变。
 
 
-1. Fork it (<https://github.com/rutikwankhade/CoverView/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+1. 请先fork该项目 (<https://github.com/rutikwankhade/CoverView/fork>)
+2. 创建一个新特性分支 (`git checkout -b feature/fooBar`)
+3. 提交您的修改 (`git commit -am 'Add some fooBar'`)
+4. 将修改推送到分支 (`git push origin feature/fooBar`)
+5. 提交一个新的拉取请求
 
 
-## 🙏 Acknowledgments
+
+## 🙏 特别感谢
 - [react-component-export-image](https://www.npmjs.com/package/react-component-export-image)
 - [Hero Patterns](https://www.heropatterns.com/)
 - [Devicons](https://github.com/devicons/devicon)
